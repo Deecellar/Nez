@@ -43,7 +43,7 @@ namespace Nez
 		/// </summary>
 		/// <param name="vec">Vec.</param>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public static Vector2 Round(this Vector2 vec)
+		public static Vector2 RoundR(this Vector2 vec)
 		{
 			return new Vector2(Mathf.Round(vec.X), Mathf.Round(vec.Y));
 		}
@@ -200,7 +200,7 @@ namespace Nez
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static Point RoundToPoint(this Vector2 vec)
 		{
-			var roundedVec = vec.Round();
+			var roundedVec = vec.RoundR();
 			return new Point((int) roundedVec.X, (int) roundedVec.Y);
 		}
 

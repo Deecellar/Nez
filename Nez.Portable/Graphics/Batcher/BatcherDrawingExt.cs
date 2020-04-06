@@ -205,10 +205,10 @@ namespace Nez
 		public static void DrawHollowRect(this Batcher batcher, float x, float y, float width, float height,
 		                                  Color color, float thickness = 1)
 		{
-			var tl = new Vector2(x, y).Round();
-			var tr = new Vector2(x + width, y).Round();
-			var br = new Vector2(x + width, y + height).Round();
-			var bl = new Vector2(x, y + height).Round();
+			var tl = new Vector2(x, y).RoundR();
+			var tr = new Vector2(x + width, y).RoundR();
+			var br = new Vector2(x + width, y + height).RoundR();
+			var bl = new Vector2(x, y + height).RoundR();
 
 			batcher.SetIgnoreRoundingDestinations(true);
 			batcher.DrawLine(tl, tr, color, thickness);
